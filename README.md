@@ -26,4 +26,4 @@ The Computer Science part of MathWars will have heavily inspired by [CodeWars](h
 
 ### Screenshot
 
-![Preview of MathWars](screenshot.png "Preview of the MathWars")
+![Preview of MathWars](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot.jpg "Preview of the MathWars")
