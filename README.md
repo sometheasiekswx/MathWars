@@ -35,3 +35,9 @@ The Computer Science part of MathWars will have heavily inspired by [CodeWars](h
 - [CSS Breakpoints w/ Media Queries](https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_col-s)
 - [Create HTML Element Dynamically 1](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 - [Create HTML Element Dynamically 2](https://www.w3schools.com/jsref/met_document_createelement.asp)
+- [Using JSON Format]()
+- [data-theme For Color Mode]()
+- [JS Objects]()
+- [Create Hamburger] ()
+- [JSDOC]()
+
