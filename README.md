@@ -28,3 +28,10 @@ The Computer Science part of MathWars will have heavily inspired by [CodeWars](h
 
 ![Preview of MathWars](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot.jpg "Preview of the MathWars")
 ![Preview of MathWars in Dark Mode](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-dark.jpg "Preview of the MathWars in Dark Mode")
+
+### API References
+
+[Mobile First Approach](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
+[CSS Breakpoints w/ Media Queries](https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_col-s)
+[Create HTML Element Dynamically 1](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+[Create HTML Element Dynamically 2](https://www.w3schools.com/jsref/met_document_createelement.asp)
