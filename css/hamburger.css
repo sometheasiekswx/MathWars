@@ -1,0 +1,145 @@
+/* Hamburger
+   ========================================================================== */
+
+/**
+ * Display the menu as an inline element, postion it to the top left relative to its normal position, and bring it to the front.
+ */
+#menu-toggle {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 25%;
+    z-index: 1;
+}
+
+/**
+ * 1. Hide and position the input so that when the hamburger is clicked, the input will also be clicked.
+ * 2. Move the input on top of the hamburger & menu.
+ * 3. Prevent iOS & Safari from displaying a callout information about the input.
+ */
+#menu-toggle input {
+    /* 1. */
+    position: relative;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -10%;
+    left: -7.5%;
+    cursor: pointer;
+    opacity: 0;
+    /* 2. */
+    z-index: 2;
+    /* 3. */
+    -webkit-touch-callout: none;
+}
+
+/**
+ * 1. Make the hamburger lines & bring to the front.
+ * 2. Set the background of lines.
+ * 3. Set the hamburger initial state & transition animation.
+ */
+#menu-toggle span {
+    /* 1. */
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+    /* 2. */
+    background: linear-gradient(-45deg, var(--orange), var(--pink), var(--light-blue), var(--light-green));
+    border-radius: 1rem;
+    /* 3. */
+    transform-origin: 0 0;
+    -webkit-transition: transform 0.25s cubic-bezier(0.1, 0.2, 0.1, 0),
+        background 0.25s cubic-bezier(0.1, 0.2, 0.1, 0),
+        opacity 0.25s ease-out;
+    -moz-transition: transform 0.25s cubic-bezier(0.1, 0.2, 0.1, 0),
+        background 0.25s cubic-bezier(0.1, 0.2, 0.1, 0),
+        opacity 0.25s ease-out;
+    -o-transition: transform 0.25s cubic-bezier(0.1, 0.2, 0.1, 0),
+        background 0.25s cubic-bezier(0.1, 0.2, 0.1, 0),
+        opacity 0.25s ease-out;
+    transition: transform 0.25s cubic-bezier(0.1, 0.2, 0.1, 0),
+        background 0.25s cubic-bezier(0.1, 0.2, 0.1, 0),
+        opacity 0.25s ease-out;
+}
+
+/**
+ * Set hamburger animation & final state when clicked.
+ */
+
+#menu-toggle span:first-child {
+    transform-origin: 0 0;
+}
+
+#menu-toggle span:nth-last-child(2) {
+    transform-origin: 0 100%;
+    margin-bottom: 0;
+}
+
+#menu-toggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0, 0);
+}
+
+#menu-toggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0, 0);
+}
+
+#menu-toggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, 0);
+}
+
+/**
+ * ^^^ Set hamburger animation & final state when clicked. ^^^
+ */
+
+/* Menu
+   ========================================================================== */
+
+/**
+ * 1. Position the menu to the top left & have it take up 75% of the screen width. 
+ * 2. Set menu background.
+ * 3. Remove symbol from lists.
+ * 4. Anti-alias rendered font.
+ * 5. Set left to right transition animation.
+ */
+#menu {
+    /* 1. */
+    position: absolute;
+    width: 600%;
+    height: 105vh;
+    margin: -75% 0 0 -25%;
+    padding: 85% 0 0 0;
+    /* 2. */
+    background: var(--hamburger-menu-1);
+    background: -webkit-linear-gradient(var(--hamburger-menu-1), var(--hamburger-menu-2));
+    background: linear-gradient(var(--hamburger-menu-1), var(--hamburger-menu-2));
+    /* 3. */
+    list-style-type: none;
+    /* 4. */
+    -webkit-font-smoothing: antialiased;
+    /* 5. */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.25s cubic-bezier(0.1, 0.2, 0.1, 0);
+}
+
+/**
+ * CSS for tablets.
+ */
+@media only screen and (min-width: 600px) {
+    #menu {
+        width: 250%;
+        height: 115vh;
+    }
+}
+
+/**
+ * Make the menu stack/appear.
+ */
+#menu-toggle input:checked~section {
+    transform: none;
+}

@@ -1,0 +1,1308 @@
+/* Document
+   ========================================================================== */
+
+/**
+ * Add the font 'Exo2'. 
+ */
+@font-face {
+    font-family: 'exo_2thin';
+    src: url('../fonts/Exo2-Thin-Webfont/exo2-thin-webfont.woff2') format('woff2'),
+        url('../fonts/Exo2-Thin-Webfont/exo2-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+ * 1. Allows padding and bording included in an element's total size.
+ * 2. Reset annoying orange outline on clicked button.
+ */
+* {
+    /* 1. */
+    box-sizing: border-box;
+    /* 2. */
+    -webkit-tap-highlight-color: #ffffff00;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: #ffffff00 !important;
+    -webkit-focus-ring-color: #ffffff00 !important;
+    outline: none !important;
+}
+
+/**
+ * Clears the content after the 'row' class.
+ */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/**
+ * 1. Align elements with 'col-' in thier class.
+ * 2. Add padding to make things clearer.  
+ */
+[class*="col-"] {
+    /* 1. */
+    float: left;
+    /* 2. */
+    padding-top: 2%;
+}
+
+/**
+ * 1. Makes scrolling smooth.
+ * 2. Sets the defualt 'light' mode variables.
+ */
+html {
+    /* 1. */
+    scroll-behavior: smooth;
+    /* 2. */
+    --bg: #fcfcfc;
+    --bg-button: #f4f4f4;
+    --title: #000000;
+    --title-button: #0c0c0c;
+    --text: #080808;
+    --border: 1.5px;
+    --toolbar: #efefef;
+    --shadow: #00000030;
+    --correct: rgba(0, 255, 51, 0.5);
+    --incorrect: rgba(255, 0, 0, 0.5);
+    --teal: #0dc1c1;
+    --dark-teal: #007483;
+    --red: #cf0d0d;
+    --orange: #eb704b;
+    --pink: #e4387a;
+    --light-pink: #e4387a40;
+    --light-blue: #20a9db;
+    --light-green: #1cd8ac;
+    --white: #f5f5f5;
+    --black: #1d1b1b;
+    --gray: #666666;
+    --hamburger-menu-1: #ece9e6f9;
+    --hamburger-menu-2: #fffffff9;
+    --multi-choice-red: #dd0b2e;
+    --multi-choice-blue: #0e65cf;
+    --multi-choice-yellow: #ffa000;
+    --multi-choice-green: #38a713;
+    --image: #ffffff00;
+    --tetrad-pure-1: #252525;
+    --tetrad-pure-2: #2E2E2E;
+    --tetrad-pure-3: #2D2D2D;
+    --tetrad-pure-4: #333333;
+}
+
+/**
+ * Set the 'dark' mode variables.
+ */
+html[data-theme='dark'] {
+    --bg: #1a1818;
+    --bg-button: #000000;
+    --title: #ffffff;
+    --title-button: #f5f5f5;
+    --text: #f6e9e9;
+    --border: 1px;
+    --toolbar: #242323;
+    --red: #f60909;
+    --gray: #2e2b2b;
+    --hamburger-menu-1: #434343fc;
+    --hamburger-menu-2: #292929fc;
+    --image: #9c9c9c;
+    --tetrad-pure-1: #F2F2F2;
+    --tetrad-pure-2: #F2F2F2;
+    --tetrad-pure-3: #EFEFEF;
+    --tetrad-pure-4: #F9F9F9;
+}
+
+/**
+ * Set the 'transparent' mode variables.
+ */
+html[data-theme='transparent'] {
+    --bg: #00000000;
+}
+
+/**
+ * Set the defualt font size.
+ */
+html,
+body {
+    font-size: 16px;
+}
+
+/**
+ * Gives a transition to the main parts of the document.
+ */
+body,
+.main,
+.sidebar {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+/**
+ * 1. Set the background color.
+ * 2. Set the defualt font & text alignment.
+ * 3. Add custom cursor.
+ */
+body {
+    /* 1. */
+    background-color: var(--bg);
+    /* 2. */
+    font-family: 'exo_2thin';
+    text-align: center;
+}
+
+/**
+ * 1. Reset the anchor.
+ * 2. Add anchor color.
+ */
+a {
+    /* 1. */
+    text-decoration: none;
+    /* 2. */
+    color: var(--title);
+}
+
+/**
+ * Reset the padding & margin of buttons.
+ */
+button {
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * 1. Allow click through.
+ * 2. Set position and index.
+ * 3. Set color and size.
+ * 4. Set animation.
+ * 5. Hide cursor.
+ */
+.cursor {
+    /* 1. */
+    pointer-events: none;
+    /* 2. */
+    position: absolute;
+    z-index: 3;
+    /* 3. */
+    background: var(--red);
+    opacity: 0.25;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    /* 4. */
+    animation: click-pulse .5s cubic-bezier(.51, 0, 0.4, .5) alternate infinite;
+    transform: translate(-50%, -50%) scale(1);
+    /* 5. */
+    display: none;
+}
+
+/**
+ * Set aimation when clicked.
+ */
+.cursor.active {
+    animation: click-bounce .5s ease;
+}
+
+/**
+ * Reset spacing.
+ */
+.app,
+.app-div,
+.app-button {
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * 1. Set color.
+ * 2. Set sizing.
+ */
+.app-button {
+    /* 1. */
+    background: var(--bg);
+    color: var(--title);
+    /* 2. */
+    font-size: 1.5em;
+    height: 100vh;
+    width: 100%;
+}
+
+/**
+ * 1. Set sizing.
+ * 2. Set animation.
+ */
+.app-icon {
+    /* 1. */
+    font-size: 1.25em;
+    /* 2. */
+    animation: bodyshake 10s;
+    animation-iteration-count: infinite;
+}
+
+/**
+ * Set font style.
+ */
+.app-sub-text {
+    font-size: 0.75em;
+    font-weight: 100;
+}
+
+/**
+ * 1. Set the title size.
+ * 2. Aligns a little bit to the top.
+ * 3. Set title color.
+ */
+.title {
+    /* 1. */
+    font-size: 1.75em;
+    /* 2. */
+    margin: -0.75% 0 0 0;
+    /* 3. */
+    color: var(--title);
+}
+
+/**
+ * 1. Set fill animation for the "MathWar"s title.
+ * 2. Set the positon & size of the SVG.
+ */
+.title-svg {
+    /* 1. */
+    animation: line-fill 1s ease-out forwards 1.25s;
+    /* 2. */
+    height: 1.75em;
+    margin: 0;
+}
+
+/**
+ * Add line animaiton to each letter of "MathWars".
+ */
+
+.title-svg path:nth-child(1) {
+    stroke-dasharray: 533.0942993164062;
+    stroke-dashoffset: 533.0942993164062;
+    animation: line 1s ease-out forwards;
+}
+
+.title-svg path:nth-child(2) {
+    stroke-dasharray: 310.5842590332031;
+    stroke-dashoffset: 310.5842590332031;
+    animation: line 1s ease-out forwards 0.1s;
+}
+
+.title-svg path:nth-child(3) {
+    stroke-dasharray: 198.0962677001953;
+    stroke-dashoffset: 198.0962677001953;
+    animation: line 1s ease-out forwards 0.2s;
+}
+
+.title-svg path:nth-child(4) {
+    stroke-dasharray: 310.4836120605469;
+    stroke-dashoffset: 310.4836120605469;
+    animation: line 1s ease-out forwards 0.3s;
+}
+
+.title-svg path:nth-child(5) {
+    stroke-dasharray: 536.8990478515625;
+    stroke-dashoffset: 536.8990478515625;
+    animation: line 1s ease-out forwards 0.4s;
+}
+
+.title-svg path:nth-child(6) {
+    stroke-dasharray: 310.5850830078125;
+    stroke-dashoffset: 310.5850830078125;
+    animation: line 1s ease-out forwards 0.5s;
+}
+
+.title-svg path:nth-child(7) {
+    stroke-dasharray: 154.37026977539062;
+    stroke-dashoffset: 154.37026977539062;
+    animation: line 1s ease-out forwards 0.6s;
+}
+
+.title-svg path:nth-child(8) {
+    stroke-dasharray: 283.5364990234375;
+    stroke-dashoffset: 283.5364990234375;
+    animation: line 1s ease-out forwards 0.7s;
+}
+
+/**
+ * ^^^ Add line animaiton to each letter of "MathWars". ^^^ 
+ */
+
+/**
+ * 1. Reset the spacing.
+ * 2. Set a height & position.
+ */
+.logoDiv,
+.profileDiv {
+    /* 1. */
+    padding: 0;
+    margin: 0;
+    /* 2. */
+    height: 3em;
+    position: relative;
+}
+
+/**
+ * 1. Reset spacing.
+ * 2. Center element.
+ */
+.logoDiv .logo,
+.profileDiv .profile {
+    /* 1. */
+    padding: 0;
+    margin: 0;
+    /* 2. */
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/**
+ * 1. Set logo stytles.
+ */
+.logoDiv .logo {
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+
+/**
+ * 1. Set profile picture styles.
+ * 2. Add morphing animnation.
+ */
+.profileDiv .profile {
+    /* 1. */
+    left: 50%;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    /* 2. */
+    animation: morphing 7.5s infinite;
+}
+
+/**
+ * Horizontally align menu bar.
+ */
+.menu {
+    padding: 0;
+    margin: auto;
+}
+
+/**
+ * Vertically align menu bar.
+ */
+.menu nav {
+    padding-top: 0.75em;
+    padding-bottom: 0.5em;
+}
+
+/**
+ * 1. Keeps in position & brings to the front.
+ * 2. Set the background color.
+ * 3. Reset padding.
+ */
+.toolbar {
+    /* 1. */
+    position: fixed;
+    z-index: 1;
+    /* 2. */
+    background-color: var(--toolbar);
+    /* 3. */
+    padding: 0;
+}
+
+/**
+ * 1. Set background color.
+ * 2. Push the element down so it does not interfere with the toolbar. 
+ */
+.main,
+.sidebar {
+    /* 1. */
+    background-color: var(--bg);
+    /* 2. */
+    padding-top: 7.5%;
+}
+
+/**
+ * Have the main element take up 100% of the screen height.
+ */
+.main {
+    height: 100vh;
+}
+
+/**
+ * Hide the sidebar.
+ */
+.sidebar {
+    display: none;
+}
+
+/**
+ * Set font and color.
+ */
+.work-in-progress-title {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: var(--title-button);
+}
+
+/**
+ * Set font, spacing, and color.
+ */
+.work-in-progress-text {
+    font-size: 1.5em;
+    font-weight: 100;
+    text-align: justify;
+    padding: 0 5%;
+    color: var(--text);
+}
+
+/**
+ * 1. Set size.
+ * 2. Set display.
+ * 3. Add rotate.
+ * 4. Erase font.
+ */
+.cube {
+    /* 1. */
+    width: 50px;
+    height: 50px;
+    /* 2. */
+    display: inline-block;
+    /* 3. */
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /* 4. */
+    font-size: 0;
+}
+
+/**
+ * 1. Positon element.
+ * 2. Set size.
+ * 3. Add scale.
+ * 4. Set display.
+ */
+.cube span {
+    /* 1. */
+    position: relative;
+    /* 1. */
+    width: 25px;
+    height: 25px;
+    /* 1. */
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    /* 1. */
+    display: inline-block;
+}
+
+/**
+ * 1. Erase content.
+ * 2. Set background.
+ * 3. Set position.
+ * 4. Set display.
+ * 5. Add transform and animation.
+ */
+.cube span::before {
+    /* 1. */
+    content: '';
+    /* 2. */
+    background-color: var(--tetrad-pure-1);
+    /* 3. */
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 4. */
+    display: block;
+    /* 5. */
+    width: 25px;
+    height: 25px;
+    /* 5. */
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -moz-animation: folding 2.5s infinite linear both;
+    -webkit-animation: folding 2.5s infinite linear both;
+    animation: folding 2.5s infinite linear both;
+}
+
+/**
+ * Set the style of each leaf.
+ */
+
+.cube .leaf-2 {
+    -moz-transform: rotateZ(90deg) scale(1.1);
+    -ms-transform: rotateZ(90deg) scale(1.1);
+    -webkit-transform: rotateZ(90deg) scale(1.1);
+    transform: rotateZ(90deg) scale(1.1);
+}
+
+.cube .leaf-2::before {
+    -moz-animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    background-color: var(--tetrad-pure-2);
+}
+
+.cube .leaf-3 {
+    -moz-transform: rotateZ(270deg) scale(1.1);
+    -ms-transform: rotateZ(270deg) scale(1.1);
+    -webkit-transform: rotateZ(270deg) scale(1.1);
+    transform: rotateZ(270deg) scale(1.1);
+}
+
+.cube .leaf-3::before {
+    -moz-animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+    background-color: var(--tetrad-pure-3);
+}
+
+.cube .leaf-4 {
+    -moz-transform: rotateZ(180deg) scale(1.1);
+    -ms-transform: rotateZ(180deg) scale(1.1);
+    -webkit-transform: rotateZ(180deg) scale(1.1);
+    transform: rotateZ(180deg) scale(1.1);
+}
+
+.cube .leaf-4::before {
+    -moz-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    background-color: var(--tetrad-pure-4);
+}
+
+/**
+ * ^^^ Set the style of each leaf. ^^^
+ */
+
+/**
+ * Set icon space & animation.
+ */
+.icon-3d {
+    padding: 1%;
+    animation: icon3d 200ms 10;
+}
+
+/**
+ * Set hover animation.
+ */
+.icon-3d:hover {
+    animation: icon3d 200ms infinite;
+}
+
+/**
+ * 1. Give color to elements with 'level-' in their class.
+ * 2. Align the text to the left for readability.
+ * 3. Add some top and bottom space for clarity.
+ */
+[class*="level-"] {
+    /* 1. */
+    color: var(--text);
+    /* 2. */
+    text-align: left;
+    /* 3. */
+    margin-top: 1%;
+    margin-bottom: 2.5%;
+}
+
+/**
+ * Set level title font & center it.
+ */
+.level-title,
+.fm-level-title {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/**
+ * Center the elements.
+ */
+[class*="fm-"] {
+    text-align: center;
+}
+
+/**
+ * Set color.
+ */
+.fm-level-timer-label {
+    color: var(--pink);
+}
+
+/**
+ * Reset space.
+ */
+.fm-level-timer-progress {
+    padding: 0;
+}
+
+/**
+ * Set font style.
+ */
+.fm-level-description {
+    font-size: 1.25em;
+}
+
+/**
+ * Set font style and space.
+ */
+.fm-level-score {
+    font-size: 1.75em;
+    padding: 2%;
+    color: var(--pink);
+}
+
+/**
+ * Set font style and space.
+ */
+.fm-level-question {
+    font-size: 2em;
+    padding: 2.5%;
+    color: var(--light-blue);
+}
+
+/**
+ * Shift the SVG image to the right a little.
+ */
+.level-image {
+    padding-left: 6.25%;
+    background-color: var(--image);
+}
+
+/**
+ * Lightly shrink & center the image.
+ */
+.col-12 .level-image-jpg {
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+/**
+ * Reset padding & give a floating effect to the image.
+ */
+.level-image-jpg {
+    padding: 0;
+    box-shadow: 0 10px 20px var(--shadow), 0 6px 6px var(--shadow);
+}
+
+/**
+ * Set the font styles of questions.
+ */
+.level-question {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+/**
+ * Adjust the sizing the level screen on mobiles.
+ */
+.level-parent,
+.fm-level-parent {
+    padding: 2.5% 7.5% 0 7.5%;
+}
+
+/**
+ * Set spacing.
+ */
+[class*="credits-"] {
+    margin: 0;
+}
+
+/**
+ * Add top margin.
+ */
+[class*="credits-"]:first-child {
+    margin-top: 5%;
+}
+
+/**
+ * Set spacing for the last element.
+ */
+[class*="credits-"]:last-of-type {
+    margin-bottom: -2.5%;
+}
+
+/**
+ * 1. Set font and space.
+ * 2. Set animation time.
+ */
+.credits-reference h2 {
+    /* 1. */
+    font-size: 2.25em;
+    padding: 1.25% 0;
+    margin: 0;
+    /* 2. */
+    -webkit-transition: all 0.75s ease-out;
+    -moz-transition: all 0.75s ease-out;
+    -o-transition: all 0.75s ease-out;
+    transition: all 0.75s ease-out;
+}
+
+/**
+ * Set hover effect to change color.
+ */
+.credits-reference h2:hover {
+    color: var(--bg);
+    background: var(--title);
+}
+
+/**
+ * 1. Set font style and spacing.
+ * 2. Set animation time.
+ */
+.credits-reference p {
+    /* 1. */
+    font-size: 1em;
+    color: var(--pink);
+    padding: 1% 0;
+    margin: 0;
+    /* 2. */
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+/**
+ * Set hover effect to change color.
+ */
+.credits-reference p:hover {
+    color: var(--light-blue);
+    background: var(--light-pink);
+}
+
+/**
+ * Vertically position the wrapper.
+ */
+.exit-wrapper {
+    margin-top: 35vh;
+}
+
+/**
+ * Style the exit text.
+ */
+.exit-text {
+    font-size: 2em;
+    color: var(--text);
+    text-shadow: 0 -1px 4px var(--white), 0 -2px 10px var(--dark-teal), 0 -10px 20px var(--pink), 0 -18px 40px var(--red), 0px 0px 0px var(--black);
+}
+
+/* Mobile
+   ========================================================================== */
+
+/**
+ * Assume that the width of elements with the 'col-' class is 100%.
+ */
+[class*="col-"] {
+    width: 100%;
+}
+
+/**
+ * Have 12 seperate columns for mobile first development.
+ */
+
+.col-0 {
+    width: 0;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/**
+ * ^^^ Have 12 seperate columns for mobile first development. ^^^
+ */
+
+/* Tablets
+   ========================================================================== */
+
+/**
+ * 1. Have 12 seperate columns for tablets.
+ * 2. CSS for tablets.
+ */
+@media only screen and (min-width: 600px) {
+    /* 1. */
+
+    .col-m-0 {
+        width: 0;
+    }
+
+    .col-m-1 {
+        width: 8.33%;
+    }
+
+    .col-m-2 {
+        width: 16.66%;
+    }
+
+    .col-m-3 {
+        width: 25%;
+    }
+
+    .col-m-4 {
+        width: 33.33%;
+    }
+
+    .col-m-5 {
+        width: 41.66%;
+    }
+
+    .col-m-6 {
+        width: 50%;
+    }
+
+    .col-m-7 {
+        width: 58.33%;
+    }
+
+    .col-m-8 {
+        width: 66.66%;
+    }
+
+    .col-m-9 {
+        width: 75%;
+    }
+
+    .col-m-10 {
+        width: 83.33%;
+    }
+
+    .col-m-11 {
+        width: 91.66%;
+    }
+
+    .col-m-12 {
+        width: 100%;
+    }
+
+    /* ^^^ 1. ^^^ */
+
+    /* 2. */
+
+    /**
+     * Set the defualt font size.
+     */
+    html,
+    body {
+        font-size: 18px;
+    }
+
+    /**
+     * Show cursor.
+     */
+    .cursor {
+        display: initial;
+    }
+
+    /**
+     * Push the element down so it does not interfere with the toolbar. 
+     */
+    .main,
+    .sidebar {
+        padding-top: 7.5%;
+    }
+
+    /**
+     * Reduce the sizing the level screen.
+     */
+    .level-parent {
+        padding: 0 17.5%;
+    }
+
+    /**
+     * Reduce the sizing the level screen.
+     */
+    .fm-level-parent {
+        padding: 0 20%;
+        margin-top: -1%;
+    }
+
+    /**
+     * Make the back button smaller & center it.
+     */
+    .level-back {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    /**
+     * Give more height elements with "col-m-" as their class.
+     */
+    [class*="col-m-"] {
+        height: 12vh;
+    }
+
+    /**
+     * Reset height.
+     */
+    .col-m-0 {
+        height: auto;
+    }
+
+    /**
+     * Center the last item if it is an odd numbered item.
+     */
+    [class*="col-m-"]:nth-child(odd):last-of-type {
+        margin-left: 25%;
+    }
+
+    /**
+     * Set the title position.
+     */
+    .title {
+        font-size: 2em;
+        margin: -2% 0 0 0;
+    }
+
+    /**
+     * Set the title position.
+     */
+    .title-svg {
+        font-size: 1.25em;
+        margin: -1.25% 0 0 0;
+    }
+
+    /**
+     * 1. Set logo stytles.
+     */
+    .logoDiv .logo {
+        left: 50%;
+        width: 35px;
+        height: 35px;
+    }
+
+    /**
+     * Set profile picture styles.
+     */
+    .profileDiv .profile {
+        left: 50%;
+        width: 35px;
+        height: 35px;
+    }
+
+    /**
+     * Remove margin top.
+     */
+    .work-in-progress {
+        margin-bottom: 5%;
+    }
+
+    /**
+     * Set top margin.
+     */
+    [class*="credits-"]:first-child {
+        margin-top: -2.5%;
+    }
+
+    /**
+     * Set bottom margin.
+     */
+    [class*="credits-"]:last-of-type {
+        margin-bottom: 0;
+    }
+
+    /**
+     * Set font.
+     */
+    .credits-reference h2 {
+        font-size: 2em;
+    }
+
+    /**
+     * Reduce button size
+     */
+    .back-smaller .btn {
+        width: 60%;
+        padding: 3% 0;
+    }
+
+    /**
+     * Can center the last button.
+     */
+    .center {
+        margin-left: 25%;
+    }
+
+    /* ^^^ 2. ^^^ */
+}
+
+/* Desktop
+   ========================================================================== */
+
+/**
+ * 1. Have 12 seperate columns for desktops.
+ * 2. CSS for desktops.
+ */
+@media only screen and (min-width: 1224px) {
+    /* 1. */
+
+    .col-l-0 {
+        width: 0;
+    }
+
+    .col-l-1 {
+        width: 8.33%;
+    }
+
+    .col-l-2 {
+        width: 16.66%;
+    }
+
+    .col-l-3 {
+        width: 25%;
+    }
+
+    .col-l-4 {
+        width: 33.33%;
+    }
+
+    .col-l-5 {
+        width: 41.66%;
+    }
+
+    .col-l-6 {
+        width: 50%;
+    }
+
+    .col-l-7 {
+        width: 58.33%;
+    }
+
+    .col-l-8 {
+        width: 66.66%;
+    }
+
+    .col-l-9 {
+        width: 75%;
+    }
+
+    .col-l-10 {
+        width: 83.33%;
+    }
+
+    .col-l-11 {
+        width: 91.66%;
+    }
+
+    .col-l-12 {
+        width: 100%;
+    }
+
+    /* ^^^ 1. ^^^ */
+
+    /* 2. */
+
+    /**
+     * Set the defualt font size.
+     */
+    html,
+    body {
+        font-size: 20px;
+    }
+
+    /**
+     * Show cursor.
+     */
+    .cursor {
+        display: initial;
+    }
+
+    /**
+     * Reduce the sizing of the level screen.
+     */
+    .level-parent {
+        padding: 2.5% 22.5% 0 22.5%;
+        margin-top: -3%;
+    }
+
+    /**
+     * Reduce the sizing of the level screen.
+     */
+    .fm-level-parent {
+        padding: 2.5% 27.5% 0 27.5%;
+        margin: -3% 0 5% 0;
+    }
+
+    /**
+     * Push the element down so it does not interfere with the toolbar. 
+     */
+    .main,
+    .sidebar {
+        padding-top: 5%;
+    }
+
+    /**
+     * Center the main element.
+     */
+    .main {
+        position: relative;
+        margin-left: 16.66%;
+    }
+
+    /**
+     * 1. Show the sidebar on desktops & bring it to the front.
+     * 2. Set the sizing & spacing.
+     * 3. Add linear gradient background color.
+     */
+    .sidebar {
+        /* 1. */
+        display: initial;
+        position: fixed;
+        left: 0;
+        z-index: 2;
+        /* 2. */
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        /* 3. */
+        background: var(--hamburger-menu-1);
+        background: -webkit-linear-gradient(var(--hamburger-menu-1), var(--hamburger-menu-2));
+        background: linear-gradient(var(--hamburger-menu-1), var(--hamburger-menu-2));
+    }
+
+    /**
+     * Hide the hamburger.
+     */
+    nav,
+    #menu-toggle,
+    #menu {
+        display: none;
+    }
+
+    /**
+     * Center the title
+     */
+    .title,
+    .title-svg {
+        position: relative;
+        left: 12.1666666%;
+    }
+
+    /**
+     * Set the title size & position.
+     */
+    .title {
+        font-size: 2.25em;
+        margin: -2% 0 0 0;
+    }
+
+    /**
+     * Set the title size & position.
+     */
+    .title-svg {
+        font-size: 1.25em;
+        margin: -1.5% 0 0 0;
+    }
+
+    /**
+     * 1. Set logo stytles.
+     */
+    .logoDiv .logo {
+        right: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    /**
+     * Set profile picture styles.
+     */
+    .profileDiv .profile {
+        left: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    /**
+     * Adjust menu bar spacing.
+     */
+    .menu {
+        padding: 0.0015%;
+    }
+
+    /**
+     * Remove margin top.
+     */
+    .work-in-progress {
+        margin-bottom: 10%;
+    }
+
+    /**
+     * Reduce top margin.
+     */
+    [class*="credits-"]:first-child {
+        margin-top: -2.5%;
+    }
+
+    /**
+     * Add bottom margin.
+     */
+    [class*="credits-"]:last-of-type {
+        margin-bottom: 5%;
+    }
+
+    /**
+     * Set font.
+     */
+    .credits-reference h2 {
+        font-size: 1.75em;
+    }
+
+    /**
+     * Reduce button size
+     */
+    .back-smaller .btn {
+        width: 50%;
+        padding: 2.5% 0;
+    }
+
+    /* ^^^ 2. ^^^ */
+}

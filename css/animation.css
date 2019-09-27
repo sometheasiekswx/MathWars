@@ -1,0 +1,637 @@
+/**
+ * Add left to right slide animation that works on Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes slide {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/**
+ * Add left to right slide animation.
+ */
+@keyframes slide {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/**
+ * Add up to down bounce animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes bounce {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/**
+ * Add up to down bounce animation.
+ */
+@keyframes bounce {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/**
+ * Add a bouncing in place animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes bounce-in-place {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    30% {
+        transform: scale(.9, 1.1) translateY(-25px);
+    }
+
+    50% {
+        transform: scale(1.05, .95) translateY(0);
+    }
+
+    57% {
+        transform: scale(1, 1) translateY(-5px);
+    }
+
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+/**
+ * Add a bouncing in place animation.
+ */
+@keyframes bounce-in-place {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    30% {
+        transform: scale(.9, 1.1) translateY(-25px);
+    }
+
+    50% {
+        transform: scale(1.05, .95) translateY(0);
+    }
+
+    57% {
+        transform: scale(1, 1) translateY(-5px);
+    }
+
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+/**
+ * Add a head shaking animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes headshake {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    6.5% {
+        -webkit-transform: translateX(-6px) rotateY(-9deg);
+        transform: translateX(-6px) rotateY(-9deg);
+    }
+
+    18.5% {
+        -webkit-transform: translateX(5px) rotateY(7deg);
+        transform: translateX(5px) rotateY(7deg);
+    }
+
+    31.5% {
+        -webkit-transform: translateX(-3px) rotateY(-5deg);
+        transform: translateX(-3px) rotateY(-5deg);
+    }
+
+    43.5% {
+        -webkit-transform: translateX(2px) rotateY(3deg);
+        transform: translateX(2px) rotateY(3deg);
+    }
+
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/**
+ * Add a head shaking animation.
+ */
+@keyframes headshake {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    6.5% {
+        -webkit-transform: translateX(-6px) rotateY(-9deg);
+        transform: translateX(-6px) rotateY(-9deg);
+    }
+
+    18.5% {
+        -webkit-transform: translateX(5px) rotateY(7deg);
+        transform: translateX(5px) rotateY(7deg);
+    }
+
+    31.5% {
+        -webkit-transform: translateX(-3px) rotateY(-5deg);
+        transform: translateX(-3px) rotateY(-5deg);
+    }
+
+    43.5% {
+        -webkit-transform: translateX(2px) rotateY(3deg);
+        transform: translateX(2px) rotateY(3deg);
+    }
+
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/**
+ * Add shaking animation 2 compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes bodyshake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/**
+ * Add shaking animation 2.
+ */
+@keyframes bodyshake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/**
+ * Add stripe sliding animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes stripe-slide {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/**
+ * Add stripe sliding animation.
+ */
+@keyframes stripe-slide {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/**
+ * Add text line animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/**
+ * Add text line animation.
+ */
+@keyframes line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/**
+ * Add text line fill animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes line-fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #007483;
+        stroke-opacity: 0;
+    }
+}
+
+/**
+ * Add text line fill animation.
+ */
+@keyframes line-fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #007483;
+        stroke-opacity: 0;
+    }
+}
+
+/**
+ * Add border raduis morphing animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes morphing {
+    20% {
+        border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+    }
+
+    40% {
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+    }
+
+    60% {
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+    }
+
+    80% {
+        border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+    }
+}
+
+/**
+ * Add border raduis morphing animation.
+ */
+@keyframes morphing {
+    20% {
+        border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+    }
+
+    40% {
+        border-radius: 54% 48% 36% 64% / 50% 63% 100% 31%;
+    }
+
+    60% {
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    }
+
+    80% {
+        border-radius: 60% 40% 65% 35% / 34% 64% 36% 66%;
+    }
+}
+
+/**
+ * Add pulse clicking animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes click-pulse {
+    from {
+        width: 50px;
+        height: 50px;
+    }
+
+    to {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/**
+ * Add pulse clicking animation.
+ */
+@keyframes click-pulse {
+    from {
+        width: 50px;
+        height: 50px;
+    }
+
+    to {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/**
+ * Add bouncing click animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes click-bounce {
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        background-color: var(--teal);
+        opacity: 1;
+    }
+}
+
+/**
+ * Add bouncing click animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@keyframes click-bounce {
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        background-color: var(--teal);
+        opacity: 1;
+    }
+}
+
+/**
+ * Add cube folding animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes folding {
+
+    0%,
+    10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+/**
+ * Add cube folding animation.
+ */
+@keyframes folding {
+
+    0%,
+    10% {
+        -moz-transform: perspective(140px) rotateX(-180deg);
+        -ms-transform: perspective(140px) rotateX(-180deg);
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        -moz-transform: perspective(140px) rotateX(0deg);
+        -ms-transform: perspective(140px) rotateX(0deg);
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        -moz-transform: perspective(140px) rotateY(180deg);
+        -ms-transform: perspective(140px) rotateY(180deg);
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+/**
+ * Add icon 3D glitch animation compatible with Chrome, Safari, Opera, & iOS browsers.
+ */
+@-webkit-keyframes icon3d {
+    0% {
+        text-shadow: 5px 4px var(--pink), -5px -6px var(--light-blue);
+    }
+
+    25% {
+        text-shadow: -5px -6px var(--pink), 5px 4px var(--light-blue);
+    }
+
+    50% {
+        text-shadow: 5px -4px var(--pink), -8px 4px var(--light-blue);
+    }
+
+    75% {
+        text-shadow: -8px -4px var(--pink), -5px -4px var(--light-blue);
+    }
+
+    100% {
+        text-shadow: -5px 0 var(--pink), 5px -4px var(--light-blue);
+    }
+}
+
+/**
+ * Add icon 3D glitch animation compatible.
+ */
+@keyframes icon3d {
+    0% {
+        text-shadow: 5px 4px var(--pink), -5px -6px var(--light-blue);
+    }
+
+    25% {
+        text-shadow: -5px -6px var(--pink), 5px 4px var(--light-blue);
+    }
+
+    50% {
+        text-shadow: 5px -4px var(--pink), -8px 4px var(--light-blue);
+    }
+
+    75% {
+        text-shadow: -8px -4px var(--pink), -5px -4px var(--light-blue);
+    }
+
+    100% {
+        text-shadow: -5px 0 var(--pink), 5px -4px var(--light-blue);
+    }
+}

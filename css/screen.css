@@ -1,0 +1,51 @@
+/**
+ * Set elements to use the left to right slide animation.
+ */
+.clear-screen {
+    -webkit-animation-name: slide;
+    animation-name: slide;
+    animation-duration: 0.5s;
+}
+
+/**
+ * Set elements to use the up to down bounce animation. 
+ */
+.correct-screen {
+    background-color: var(--correct);
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    animation-duration: 0.75s;
+}
+
+/**
+ * Set elements to use the shaking animation. 
+ */
+.incorrect-screen {
+    background-color: var(--incorrect);
+    -webkit-animation-name: headshake;
+    animation-name: headshake;
+    animation-duration: 0.5s;
+}
+
+/**
+ * 1. Reset spacing
+ * 2. Give the sreen a shaking animation.
+ */
+.exit-screen {
+    /* 1. */
+    margin: 0;
+    padding: 0;
+    /* 2. */
+    -webkit-animation-name: headshake;
+    animation-name: headshake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/**
+ * Prevent clicks.
+ */
+.no-click {
+    pointer-events: none;
+    cursor: none;
+}
