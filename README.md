@@ -1,6 +1,6 @@
 ## MathWars
 
-Visit live version here [MathWars](https://github.com/sometheasiekswx). 
+Visit live version here [MathWars](https://sometheasiekswx.github.io/MathWars/index.html). 
 Made by [Somethea Siek](https://github.com/sometheasiekswx), an Aspiring Developer.
 
 ### Description
