@@ -107,7 +107,7 @@ function addBackgroundAudio(music = "victory.mp3") {
     window.backgroundAudioOnce = document.createElement("audio");
     // backgroundAudioOnce.src = "../audio/" + music;
     backgroundAudioOnce.src = "audio/" + music;
-    backgroundAudioOnce.volume = 1;
+    backgroundAudioOnce.volume = 0.25;
 
     backgroundAudioOnce.play();
 };
