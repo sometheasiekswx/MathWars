@@ -26,7 +26,7 @@ The Computer Science part of MathWars will have heavily inspired by [CodeWars](h
 
 ### Screenshot
 
-![Preview of MathWars in Both Color Modes](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-both.jpg "Preview of MathWars in Both Color Mode" =50)
+![Preview of MathWars in Both Color Modes](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-both.jpg "Preview of MathWars in Both Color Mode" | width=50)
 ![Preview of MathWars in Light Mode](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-light.jpg "Preview of MathWars in Light Mode")
 ![Preview of MathWars in Dark Mode](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-dark.jpg "Preview of the MathWars in Dark Mode")
 ![Preview of the MathWars on Tablet in Light Mode](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-light-tablet.jpg "Preview of the MathWars on Tablet in Light Mode")
