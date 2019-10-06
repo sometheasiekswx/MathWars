@@ -3,6 +3,10 @@
 Visit live version here [MathWars](https://sometheasiekswx.github.io/MathWars/). 
 Made by [Somethea Siek](https://github.com/sometheasiekswx), an Aspiring Developer.
 
+### Screenshot
+
+![Preview of MathWars in Both Color Modes](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-both.jpg "Preview of MathWars in Both Color Mode")
+
 ### Description
 
 MathWars is an beautifully designed educational web app perfect for future Mathematicians, Computer Scientists, and Engineers! The MathWars project was started because of a unit course at Deakin College (SIT120), it was designed to teach kids and teens that Math can be fun and engaging. Students will be able to practice solving the many problems in Mathematics ranging from easy to mind-boggling.
@@ -23,10 +27,6 @@ MathWars is an beautifully designed educational web app perfect for future Mathe
 This online platform aims to be community driven, which means that anyone can set up their own questions with answers that others can try to solve and gain points from. There are groups that the users can join to solve large problems together to each earn more points than usual. The skills taught in MathWars will be very useful in many different fields that involve complex problem solving.
 
 The Computer Science part of MathWars will have heavily inspired by [CodeWars](https://www.codewars.com/). As for the Engineering part, [Brilliant](https://brilliant.org/) will have a major influence.
-
-### Screenshot
-
-![Preview of MathWars in Both Color Modes](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-both.jpg "Preview of MathWars in Both Color Mode")
 
 ### API References
 
