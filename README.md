@@ -1,17 +1,17 @@
-## MathWars
+# MathWars
 
 Visit live version here [MathWars](https://sometheasiekswx.github.io/MathWars/). 
 Made by [Somethea Siek](https://github.com/sometheasiekswx), an Aspiring Developer.
 
-### Screenshot
+## Screenshot
 
 ![Preview of MathWars in Both Color Modes](https://github.com/sometheasiekswx/MathWars/blob/master/screenshot-both.jpg "Preview of MathWars in Both Color Mode")
 
-### Description
+## Description
 
 MathWars is an beautifully designed educational web app perfect for future Mathematicians, Computer Scientists, and Engineers! The MathWars project was started because of a unit course at Deakin College (SIT120), it was designed to teach kids and teens that Math can be fun and engaging. Students will be able to practice solving the many problems in Mathematics ranging from easy to mind-boggling.
 
-### Features
+## Features
 
 - Mathematics: There were many Mathematics-related mini-games to play in this section.
 - Multiple Choices: There will be 4 multiple choices to select from when answering a question, 1 of which is the correct answer. 
@@ -22,13 +22,13 @@ MathWars is an beautifully designed educational web app perfect for future Mathe
 - Light Mode (Defualt): The defualt color mode of MathWars that is seemless and pretty.
 - Dark Mode: The second color mode of the entire app that saves battery and expresses confident. 
 
-### The future
+## The future
 
 This online platform aims to be community driven, which means that anyone can set up their own questions with answers that others can try to solve and gain points from. There are groups that the users can join to solve large problems together to each earn more points than usual. The skills taught in MathWars will be very useful in many different fields that involve complex problem solving.
 
 The Computer Science part of MathWars will have heavily inspired by [CodeWars](https://www.codewars.com/). As for the Engineering part, [Brilliant](https://brilliant.org/) will have a major influence.
 
-### API References
+## API References
 
 - [Mobile First Approach](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 - [CSS Breakpoints w/ Media Queries](https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_col-s)
