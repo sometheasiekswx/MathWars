@@ -180,6 +180,21 @@ trigonometryLevels.push({
 i++;
 trigonometryLevels.push({
     "level": i,
+    "title": "Last Question",
+    "description": "This is the last question",
+    "question": "Is this the last question?",
+    "options": [
+        "Yes",
+        "No",
+        "Not Sure",
+        "IDK"
+    ],
+    "answer": "No"
+});
+
+i++;
+trigonometryLevels.push({
+    "level": i,
     "title": "No More Levels...",
     "description": "You have reached the end the line... So far... With more support, I wil continue to develop MathWars. Feel free to let me know if you want to see more levels or to have issues/bugs you found fixed @sometheasiekswx@gmail.com.",
     "question": "Do you like this app so far?",
