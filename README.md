@@ -28,7 +28,7 @@ This online platform aims to be community driven, which means that anyone can se
 
 The Computer Science part of MathWars will have heavily inspired by [CodeWars](https://www.codewars.com/). As for the Engineering part, [Brilliant](https://brilliant.org/) will have a major influence.
 
-## API References
+## References
 
 - [Mobile First Approach](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 - [CSS Breakpoints w/ Media Queries](https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_col-s)
