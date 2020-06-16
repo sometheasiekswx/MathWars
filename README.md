@@ -1,6 +1,6 @@
 # MathWars
 
-Visit live version here [MathWars](https://sometheasiekswx.github.io/MathWars/) (GitHub Pages) OR [MathWars](https://mathwars.netlify.app/) (Netlify).
+Visit live version here [MathWars](https://sometheasiekswx.github.io/MathWars/) with GitHub Pages or here [MathWars](https://mathwars.netlify.app/) with Netlify.
 
 Made by [Somethea Siek](https://github.com/sometheasiekswx), an Aspiring Developer.
 
