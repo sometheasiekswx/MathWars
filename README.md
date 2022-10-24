@@ -1,6 +1,6 @@
 # [MathWars](https://sometheasiekswx.github.io/MathWars/)
 
-Made with no JS framework. Only pure JS.
+Made without using any JS framework as a challenge. Only pure JS, CSS, and HTML.
 
 Visit live version here [https://sometheasiekswx.github.io/MathWars/](https://sometheasiekswx.github.io/MathWars/).
 
