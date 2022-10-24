@@ -1,8 +1,10 @@
 # [MathWars](https://sometheasiekswx.github.io/MathWars/)
 
+Made with no JS framework. Only pure JS.
+
 Visit live version here [https://sometheasiekswx.github.io/MathWars/](https://sometheasiekswx.github.io/MathWars/).
 
-Made by [Somethea Siek](https://github.com/sometheasiekswx), an Aspiring Developer.
+Made by [Somethea Siek](https://github.com/sometheasiekswx).
 
 ## Screenshot
 
